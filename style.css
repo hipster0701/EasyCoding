@@ -1,3 +1,8 @@
+@font-face {
+  font-family: easy;
+  src: url(Zapfino.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +20,8 @@ body {
 .fly-in-text li {
     display: inline-block;
     margin-right: 5px;
-    font-family: Zapfino, Arial;
+    /*font-family: Zapfino, Arial;*/
+    font-family: easy;
     font-weight: 600;
     font-size: 4em;
     color: #000;
