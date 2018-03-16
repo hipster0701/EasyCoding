@@ -1,43 +1,104 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>index</title>
-        <style type="text/css">
-            
-            
-        </style>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
 
-        <ul class="fly-in-text hidden">
-            <li>E</li>
-            <li>a</li>
-            <li>s</li>
-            <li>y</li>
-            <li>C</li>
-            <li>o</li>
-            <li>d</li>
-            <li>i</li>
-            <li>n</li>
-            <li>g</li>
-        </ul>
-        
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script type="text/javascript">
-            
-            $(function() {
-                
-                setTimeout(function() {
-                    $('.fly-in-text').removeClass('hidden');
-                }, 500);
-                
-            })();
-            
-        </script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>index</title>
+    <style type="text/css">
 
-    </body>
+
+    </style>
+    <link rel="stylesheet" href="font-animation.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body style="overflow: hidden;">
+
+    <!--    <div>-->
+
+    <ul class="fly-in-text hidden">
+        <li>E</li>
+        <li>a</li>
+        <li>s</li>
+        <li>y</li>
+        <li>C</li>
+        <li>o</li>
+        <li>d</li>
+        <li>i</li>
+        <li>n</li>
+        <li>g</li>
+    </ul>
+
+    <div id="sign-up">註冊</div>
+    <div id="log-in">登入</div>
+
+    <div id="moring">
+
+    </div>
+
+    <div id="sun">
+
+    </div>
+
+    <div id="moon">
+
+    </div>
+
+    <!--    </div>-->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            setTimeout(function() {
+                $('.fly-in-text').removeClass('hidden');
+            }, 500);
+
+        })();
+
+    </script>
+
+    <script src="jquery-3.3.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#log-in").click(function() {
+                $("#moring").css("transform", "rotate(0deg)");
+
+                $("#sun").css({
+                    "top": "0vh",
+                    "left": "85vw"
+                });
+
+                $("#moon").css({
+                    "bottom": "-100vh",
+                    "right": "-100vw"
+                });
+            });
+
+            $("#sign-up").click(function() {
+                $("#moring").css("transform", "rotate(-180deg)");
+            });
+
+            $("#moon, #sun").click(function() {
+                $("#moring").css("transform", "rotate(-95deg)");
+
+                $("#sun").css({
+                    "top": "-15vh",
+                    "left": "-10vw"
+                });
+
+                $("#moon").css({
+                    "bottom": "-100vh",
+                    "right": "-100vw"
+                });
+            });
+        });
+
+    </script>
+
+</body>
+
 </html>
