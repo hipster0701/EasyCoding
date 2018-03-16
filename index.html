@@ -80,6 +80,16 @@
 
             $("#sign-up").click(function() {
                 $("#moring").css("transform", "rotate(-180deg)");
+
+                $("#sun").css({
+                    "top": "-100vh",
+                    "left": "-100vw"
+                });
+
+                $("#moon").css({
+                    "bottom": "70vh",
+                    "right": "80vw"
+                });
             });
 
             $("#moon, #sun").click(function() {
@@ -91,8 +101,8 @@
                 });
 
                 $("#moon").css({
-                    "bottom": "-100vh",
-                    "right": "-100vw"
+                    "bottom": "-15vh",
+                    "right": "-10vw"
                 });
             });
         });
