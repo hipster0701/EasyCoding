@@ -8,6 +8,11 @@ body {
     z-index: -1
 }
 
+@font-face {
+    font-family: bubu;
+    src: url(華康流風體_0.ttf);
+}
+
 :root {
     --r: 20vw;
 }
@@ -83,10 +88,11 @@ body {
 #sign-up {
     position: absolute;
 
-    font-size: 20px;
+    font-size: 50px;
+    font-family: bubu;
 
     top: 55%;
-    left: 55%;
+    left: 53%;
 
     color: white;
 
@@ -96,10 +102,11 @@ body {
 #log-in {
     position: absolute;
 
-    font-size: 20px;
-
+    font-size: 50px;
+    font-family: bubu;
+    
     top: 55%;
-    left: 40%;
+    left: 35%;
 
     color: white;
 
