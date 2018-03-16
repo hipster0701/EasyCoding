@@ -64,17 +64,22 @@
 
     <script>
         $(document).ready(function() {
+            var conter_clock = "1s, 2s"
+            var clock_wise = "2s, 1s"
+
             $("#log-in").click(function() {
                 $("#moring").css("transform", "rotate(0deg)");
 
                 $("#sun").css({
-                    "top": "0vh",
-                    "left": "85vw"
+                    "top": "-3vh",
+                    "left": "80vw",
+                    "transition-duration": conter_clock
                 });
 
                 $("#moon").css({
-                    "bottom": "-100vh",
-                    "right": "-100vw"
+                    "bottom": "-80vh",
+                    "right": "-30vw",
+                    "transition-duration": clock_wise
                 });
             });
 
@@ -83,12 +88,14 @@
 
                 $("#sun").css({
                     "top": "-100vh",
-                    "left": "-100vw"
+                    "left": "-100vw",
+                    "transition-duration": clock_wise
                 });
 
                 $("#moon").css({
                     "bottom": "70vh",
-                    "right": "80vw"
+                    "right": "80vw",
+                    "transition-duration": conter_clock
                 });
             });
 
@@ -97,12 +104,14 @@
 
                 $("#sun").css({
                     "top": "-15vh",
-                    "left": "-10vw"
+                    "left": "-10vw",
+                    "transition-duration": conter_clock
                 });
 
                 $("#moon").css({
                     "bottom": "-15vh",
-                    "right": "-10vw"
+                    "right": "-10vw",
+                    "transition-duration": clock_wise
                 });
             });
         });
