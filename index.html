@@ -9,6 +9,7 @@
     </style>
     <link rel="stylesheet" href="font-animation.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body style="overflow: hidden;">
@@ -30,7 +31,7 @@
 
     <div id="sign-up">註冊</div>
     <div id="log-in">登入</div>
-<!--    <div id="guid">try try see!/試試看</div>-->
+    <!--    <div id="guid">try try see!/試試看</div>-->
 
 
     <div id="back">
@@ -44,6 +45,21 @@
 
     <div id="moon">
 
+    </div>
+
+    <div class="login-container">
+        <img src="images/bug.jpg">
+        <form>
+            <div class="form-input">
+                <input type="text" name="username" placeholder="輸入使用者帳號">
+            </div>
+            <div class="form-input">
+                <input type="password" name="password" placeholder="輸入使用者密碼">
+            </div>
+            <input type="submit" name="submit" value="登錄" class="btn-login">
+            <p class="login">忘記密碼?</p>
+            <p class="login">尚未註冊?</p>
+        </form>
     </div>
 
     <!--    </div>-->
@@ -81,7 +97,6 @@
             var to_night, to_moring, to_early_moring;
 
             $("#log-in").click(function() {
-                //$("#moring").css("transform", "rotate(0deg)");
                 if (to_early_moring != undefined) {
                     clearInterval(to_early_moring);
                     to_early_moring = undefined;
@@ -105,9 +120,9 @@
                     "transition-duration": clock_wise
                 });
 
-                $('.fly-in-text').addClass('hidden');
-
-
+                $.(".fly-in-text").css({
+                    "left": "100%"
+                });
             });
 
             $("#sign-up").click(function() {
@@ -134,9 +149,8 @@
                     "transition-duration": conter_clock
                 });
 
-                $('.fly-in-text').addClass('hidden');
-
-
+                //                $('.fly-in-text').addClass('hidden');
+                //                $("#log-in").fadeOut();
             });
 
             $("#moon, #sun").click(function() {
@@ -156,6 +170,8 @@
                 });
 
                 $('.fly-in-text').removeClass('hidden');
+
+                $("#sign-up,#log-in").fadeIn();
             });
 
             var r = sign_up_r,
@@ -222,6 +238,13 @@
 
 
         });
+    </script>
+
+
+    <script>
+        $(document).ready(function() {
+            $(".login-container").hide();
+        })
     </script>
 
 </body>
