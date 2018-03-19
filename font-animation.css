@@ -24,7 +24,7 @@
     font-size: 4em;
     color: #fff;
     opacity: 1;
-    transition: all 2.5s ease;
+    transition: all 1s ease;
 }
 
 .fly-in-text li:last-child {

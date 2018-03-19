@@ -6,8 +6,7 @@
 body {
     /*    background-color: #87ceeb;*/
     /*    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);*/
-    z-index: -1;
-
+    /*    z-index: -1;*/
     /*    transition: all 2s ease;*/
 }
 
@@ -20,8 +19,6 @@ body {
     --r: 20vw;
 }
 
-#wrapper {}
-
 #logo_to_the_moon {
     position: fixed;
 
@@ -32,30 +29,23 @@ body {
 
     width: 100vw;
 
-    transition: all 1s ease;
+    transition: all 2s ease;
 }
 
 #back {
     position: relative;
-    /*
-left: -50vw;
-top: -100vh;
-*/
+
     height: 100vh;
     width: 100vw;
 
     background: linear-gradient(to bottom right, rgb(135, 206, 235), rgb(0, 0, 0));
-    /*
-transform: rotate(-95deg);
-transform-origin: bottom;
-*/
+
     transition: all 2s ease;
 
     z-index: -999;
 }
 
 #moon {
-    /*    display: none;*/
     position: absolute;
 
     bottom: -15vh;
@@ -63,6 +53,12 @@ transform-origin: bottom;
 
     height: var(--r);
     width: var(--r);
+
+    font-size: 40px;
+    font-family: bubu;
+
+    line-height: var(--r);
+    text-align: center;
 
     border-radius: 100%;
 
@@ -75,7 +71,9 @@ transform-origin: bottom;
     transition-duration: 1s, 2s;
 }
 
-#moon:hover {}
+#moon p {
+    display: none;
+}
 
 #sun {
     /*    display: none;*/
@@ -87,6 +85,12 @@ transform-origin: bottom;
     height: var(--r);
     width: var(--r);
 
+    font-size: 40px;
+    font-family: bubu;
+
+    line-height: var(--r);
+    text-align: center;
+
     border-radius: 100%;
 
     background-color: rgba(255, 152, 0, 1);
@@ -96,10 +100,12 @@ transform-origin: bottom;
     transition-property: top, left;
     transition-duration: 1s, 2s;
     /*    transition: all 2s ease;*/
-    z-index: 999px;
+    z-index: 9;
 }
 
-#sun:hover {}
+#sun p {
+    display: none;
+}
 
 #sign-up {
     position: absolute;
@@ -113,6 +119,10 @@ transform-origin: bottom;
     color: white;
 
     z-index: 2;
+
+    transition: all 2s ease;
+
+    display: none;
 }
 
 #log-in {
@@ -127,6 +137,10 @@ transform-origin: bottom;
     color: white;
 
     z-index: 2;
+
+    transition: all 2s ease;
+
+    display: none;
 }
 
 #guid {

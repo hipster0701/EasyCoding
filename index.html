@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="font-animation.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="signup.css">
 </head>
 
 <body style="overflow: hidden;">
@@ -41,11 +42,11 @@
 
 
     <div id="sun">
-
+        <p>返回</p>
     </div>
 
     <div id="moon">
-
+        <p>返回</p>
     </div>
 
     <div class="login-container">
@@ -63,8 +64,27 @@
         </form>
     </div>
 
-    <!--    </div>-->
+    <div class="signup_container">
+        <img src="images/bug.jpg">
+        <form>
+            <div class="form-input">
+                <input type="text" name="mailaddress" placeholder="註冊郵件">
+            </div>
+            <div class="form-input">
+                <input type="text" name="username" placeholder="使用者帳號">
+            </div>
+            <div class="form-input">
+                <input type="password" name="password" placeholder="使用者密碼">
+            </div>
+            <div class="form-input">
+                <input type="password" name="password" placeholder="確認使用者密碼">
+            </div>
+            <input type="submit" name="submit" value="註冊" class="btn-login">
+            <p>已有帳號?</p>
+        </form>
+    </div>
 
+    <!--    </div>-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
@@ -75,6 +95,11 @@
             setTimeout(function() {
                 $('.fly-in-text').removeClass('hidden');
             }, 500);
+
+            setTimeout(function() {
+                $("#sign-up,#log-in").fadeIn(1000);
+            }, 1000);
+
 
         });
     </script>
@@ -109,6 +134,8 @@
 
                 to_moring = setInterval(moring);
 
+                $("#sun p").fadeIn(3000);
+
                 $("#sun").css({
                     "top": "-3vh",
                     "left": "80vw",
@@ -122,8 +149,24 @@
                 });
 
                 $("#logo_to_the_moon").css({
-                    "left": "70%"
+                    "left": "100%"
                 });
+
+                $("#log-in").css({
+                    "left": "135%"
+                });
+
+                $("#sign-up").css({
+                    "left": "153%"
+                });
+
+                //$("#log-in").slideToggle(300, false);
+                //$("#sign-up").slideToggle(300, false);
+
+                $(".login-container").css({
+                    "left": "0vw"
+                });
+
 
             });
 
@@ -151,6 +194,27 @@
                     "transition-duration": conter_clock
                 });
 
+                $("#logo_to_the_moon").css({
+                    "left": "-100%"
+                });
+
+                $("#moon p").fadeIn(3000);
+
+                $("#log-in").slideToggle(300, false);
+                $("#sign-up").slideToggle(300, false);
+
+                $("#log-in").css({
+                    "left": "-135%"
+                });
+
+                $("#sign-up").css({
+                    "left": "-153%"
+                });
+
+                $(".signup_container").css({
+                    "left": "0vw"
+                });
+
                 //                $('.fly-in-text').addClass('hidden');
                 //                $("#log-in").fadeOut();
             });
@@ -171,9 +235,31 @@
                     "transition-duration": clock_wise
                 });
 
+                $("#logo_to_the_moon").css({
+                    "left": "0%"
+                });
+
                 $('.fly-in-text').removeClass('hidden');
 
                 $("#sign-up,#log-in").fadeIn();
+
+                $("#sun p,#moon p").hide();
+
+                $("#log-in").css({
+                    "left": "35%"
+                });
+
+                $("#sign-up").css({
+                    "left": "53%"
+                });
+
+                $(".login-container").css({
+                    "left": "-100vw"
+                });
+
+                $(".signup_container").css({
+                    "left": "100vw"
+                });
             });
 
             var r = sign_up_r,
@@ -245,7 +331,7 @@
 
     <script>
         $(document).ready(function() {
-            $(".login-container").hide();
+
         })
     </script>
 
