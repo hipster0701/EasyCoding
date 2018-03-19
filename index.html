@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>index</title>
     <style type="text/css">
-
-
     </style>
     <link rel="stylesheet" href="font-animation.css">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -32,10 +30,13 @@
 
     <div id="sign-up">註冊</div>
     <div id="log-in">登入</div>
+<!--    <div id="guid">try try see!/試試看</div>-->
 
-    <div id="moring">
+
+    <div id="back">
 
     </div>
+
 
     <div id="sun">
 
@@ -49,6 +50,8 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!--文字動畫-->
     <script type="text/javascript">
         $(function() {
 
@@ -57,18 +60,38 @@
             }, 500);
 
         })();
-
     </script>
 
     <script src="jquery-3.3.1.min.js"></script>
 
+    <!--背景動畫-->
     <script>
         $(document).ready(function() {
-            var conter_clock = "1s, 2s"
-            var clock_wise = "2s, 1s"
+            var conter_clock = "1s, 2s",
+                clock_wise = "2s, 1s";
+
+            const log_in_r = 135,
+                log_in_g = 206,
+                log_in_b = 235;
+
+            const sign_up_r = 0,
+                sign_up_g = 0,
+                sign_up_b = 0;
+
+            var to_night, to_moring, to_early_moring;
 
             $("#log-in").click(function() {
-                $("#moring").css("transform", "rotate(0deg)");
+                //$("#moring").css("transform", "rotate(0deg)");
+                if (to_early_moring != undefined) {
+                    clearInterval(to_early_moring);
+                    to_early_moring = undefined;
+                }
+
+                r = sign_up_r
+                g = sign_up_g
+                b = sign_up_b
+
+                to_moring = setInterval(moring);
 
                 $("#sun").css({
                     "top": "-3vh",
@@ -81,10 +104,23 @@
                     "right": "-30vw",
                     "transition-duration": clock_wise
                 });
+
+                $('.fly-in-text').addClass('hidden');
+
+
             });
 
             $("#sign-up").click(function() {
-                $("#moring").css("transform", "rotate(-180deg)");
+                r = log_in_r;
+                g = log_in_g;
+                b = log_in_b;
+
+                if (to_early_moring != undefined) {
+                    clearInterval(to_early_moring);
+                    to_early_moring = undefined;
+                }
+
+                to_night = setInterval(night, 10);
 
                 $("#sun").css({
                     "top": "-100vh",
@@ -97,10 +133,15 @@
                     "right": "80vw",
                     "transition-duration": conter_clock
                 });
+
+                $('.fly-in-text').addClass('hidden');
+
+
             });
 
             $("#moon, #sun").click(function() {
-                $("#moring").css("transform", "rotate(-95deg)");
+                //$("#moring").css("transform", "rotate(-95deg)");
+                early_moring();
 
                 $("#sun").css({
                     "top": "-15vh",
@@ -113,9 +154,74 @@
                     "right": "-10vw",
                     "transition-duration": clock_wise
                 });
-            });
-        });
 
+                $('.fly-in-text').removeClass('hidden');
+            });
+
+            var r = sign_up_r,
+                g = sign_up_g,
+                b = sign_up_b;
+
+            //亂改記得調大於小於
+            var night = function() {
+
+
+                if (r > sign_up_r) r -= log_in_r / 100;
+                if (g > sign_up_g) g -= log_in_g / 100;
+                if (b > sign_up_b) b -= log_in_b / 100;
+
+                $("#back").css({
+                    "background": "linear-gradient(to bottom right, rgb(" + Math.round(r) + ", " + Math.round(g) + ", " + Math.round(b) + "), rgb(" + sign_up_r + ", " + sign_up_g + ", " + sign_up_b + "))"
+                });
+            };
+
+            var moring = function() {
+
+
+                if (r < log_in_r) r += log_in_r / 100;
+                if (g < log_in_g) g += log_in_g / 100;
+                if (b < log_in_b) b += log_in_b / 100;
+
+                $("#back").css({
+                    "background": "linear-gradient(to bottom right, rgb(" + log_in_r + ", " + log_in_g + ", " + log_in_b + "), rgb(" + Math.round(r) + ", " + Math.round(g) + ", " + Math.round(b) + "))"
+                });
+            };
+
+            var early_moring = function() {
+                if (to_moring != undefined) {
+                    clearInterval(to_moring);
+                    to_moring = undefined;
+
+                    to_early_moring = setInterval(function() {
+                        if (r > sign_up_r) r -= log_in_r / 100;
+                        if (g > sign_up_g) g -= log_in_g / 100;
+                        if (b > sign_up_b) b -= log_in_b / 100;
+
+                        $("#back").css({
+                            "background": "linear-gradient(to bottom right, rgb(" + log_in_r + ", " + log_in_g + ", " + log_in_b + "), rgb(" + Math.round(r) + ", " + Math.round(g) + ", " + Math.round(b) + "))"
+                        });
+                    }, 10);
+
+                }
+                if (to_night != undefined) {
+                    clearInterval(to_night);
+                    to_night = undefined;
+
+                    to_early_moring = setInterval(function() {
+                        if (r < log_in_r) r += log_in_r / 100;
+                        if (g < log_in_g) g += log_in_g / 100;
+                        if (b < log_in_b) b += log_in_b / 100;
+
+                        $("#back").css({
+                            "background": "linear-gradient(to bottom right, rgb(" + Math.round(r) + ", " + Math.round(g) + ", " + Math.round(b) + "), rgb(" + sign_up_r + ", " + sign_up_g + ", " + sign_up_b + "))"
+                        });
+                    }, 10);
+
+                }
+            }
+
+
+        });
     </script>
 
 </body>
