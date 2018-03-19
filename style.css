@@ -22,6 +22,19 @@ body {
 
 #wrapper {}
 
+#logo_to_the_moon {
+    position: fixed;
+
+    top: 50%;
+    left: 0;
+
+    height: auto;
+
+    width: 100vw;
+
+    transition: all 1s ease;
+}
+
 #back {
     position: relative;
     /*
