@@ -1,6 +1,6 @@
 * {
     background-color: black;
-    color: white;
+    color: #aaa;
     font-family: 'Quicksand', sans-serif;
     font-family: Noto Sans CJK TC Thin;
 }
@@ -47,11 +47,11 @@ input[type="password"] {
     font-size: 18px;
     border-style: solid;
     border-width: 0.5px;
+    border-color: #fff;
     margin-bottom: 20px;
     background-color: none;
     padding-left: 5px;
     font-size: 14px;
-    color: #fff;
 }
 
 .btn-login {
