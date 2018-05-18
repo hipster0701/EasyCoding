@@ -1,0 +1,125 @@
+html {
+    font-family: 'Quicksand', sans-serif;
+    font-family: Noto Sans CJK TC Thin;
+}
+
+html,
+body {
+    background-color: #aaa;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 56px;
+    color: #aaa;
+}
+
+.tagline {
+    color: #aaa;
+}
+
+.nav {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    /*-webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, .27);
+    -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0.27);
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0.27);*/
+}
+
+.nav a {
+    text-decoration: none;
+    color: #aaa;
+}
+
+.nav .nav_btn {
+    float: left;
+    font-size: 30px;
+    margin-left: 1em;
+}
+
+.nav p {
+    padding: 0.75em 2.5em;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 100;
+    border: solid #aaa 1px;
+    border-radius: 100px;
+    margin-right: 2em;
+    margin-top: 12px;
+    float: right;
+}
+
+.banner {
+    padding: 0;
+    margin: 0;
+    color: white;
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+}
+
+.banner h1 {
+    padding: 2.5em 0 0 0;
+    margin: 0;
+    clear: both;
+}
+
+.banner a {
+    background-color: white;
+}
+
+.tagline {
+    font-weight: 100;
+    margin: 0.5em 0 1em 0;
+    padding: 0;
+}
+
+.banner_btn {
+    color: #DD4C4C;
+    text-decoration: none;
+}
+
+.banner a p {
+    background-color: white;
+    width: 180px;
+    padding: 0.75em 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100px;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.9);
+}
+
+.row {
+    width: 100%;
+}
+
+.row_cell {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    text-align: center;
+    margin: 1em 1em;
+    border: solid 1px #aaa;
+    border-radius: 25px;
+}
+
+.row_cell img {
+    width: 80px;
+    height: auto;
+    margin: 3.65em 0 0 0;
+    color: white;
+}
+
+.row_cell p {
+    font-size: 20px;
+    color: #aaa;
+}

@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+@font-face {
+    font-family: bubu;
+    src: url(Zapfino.ttf);
+}
+
+
+body {
+    background: black;
+}
+
+/*logo*/
+
+#logotop {
+    position: absolute;
+
+    color: #AAA;
+
+    top: 25%;
+    left: 5%;
+
+    font-size: 100px;
+    font-family: bubu;
+    letter-spacing: 15px;
+}
+
+#logodown {
+    position: absolute;
+
+    color: #AAA;
+
+    top: 50%;
+    left: 20%;
+
+    font-size: 80px;
+    font-family: bubu;
+    letter-spacing: 15px;
+}
+
+#content {
+    background-color: #000000;
+    position: relative;
+
+    /*
+    top: 5vh;
+    left: 5%;
+*/
+    width: 100%;
+    height: 100vh;
+
+}
+
+#longline {
+    position: absolute;
+
+    top: 50%;
+    left: 20px;
+
+    width: 95%;
+    height: 2px;
+
+    background: -webkit-linear-gradient(left, white, black);
+    background: -o-linear-gradient(right, white, black);
+    background: -moz-linear-gradient(right, white, black);
+    background: linear-gradient(to right, white, black);
+
+}
+
+#shortline {
+    position: absolute;
+
+    top: 52%;
+    right: 20px;
+
+    width: 35%;
+    height: 2px;
+
+    background: -webkit-linear-gradient(left, black, white);
+    background: -o-linear-gradient(right, black, white);
+    background: -moz-linear-gradient(right, black, white);
+    background: linear-gradient(to right, black, white);
+}
+
+#registered {
+    position: absolute;
+
+    top: 53%;
+    right: 3%;
+
+    font-size: 30px;
+    font-family: cbubu;
+    color: #AAA;
+
+    text-align: center;
+}
+
+#login {
+    position: absolute;
+
+    top: 53%;
+    right: 8%;
+
+    font-size: 30px;
+    font-family: cbubu;
+    color: #AAA;
+
+    text-align: center;
+}
+
+a {
+    color: #AAA;
+}
+
+a:hover {
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+    color: #AAA;
+}

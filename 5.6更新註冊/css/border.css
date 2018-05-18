@@ -1,0 +1,80 @@
+@font-face {
+    font-family: cbubu;
+    src: url(NotoSansTC-Thin.otf);
+}
+
+/*bodyborder*/
+
+.bodyborder {
+    color: white;
+}
+
+/*bodyborder-right*/
+
+#bodyborder-right {
+    position: absolute;
+
+    padding-top: 47vh;
+
+    right: 0;
+
+    height: 55vh;
+    width: 5%;
+
+    font-size: 30px;
+    font-family: cbubu;
+    color: #AAA;
+
+    text-align: center;
+}
+
+#bodyborder-right ul {
+    height: 0;
+
+    display: inline-block;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+#bodyborder-right li {
+    height: 1em;
+
+    text-align: center;
+}
+
+/*bodyborder-left*/
+
+#bodyborder-left {
+    position: absolute;
+
+    padding-top: 47vh;
+
+    left: 0;
+
+    height: 55vh;
+    width: 5%;
+
+    font-size: 30px;
+    font-family: cbubu;
+    color: #AAA;
+
+    text-align: center;
+}
+
+#bodyborder-left ul {
+    height: 0;
+
+    display: inline-block;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+#bodyborder-left li {
+    height: 1em;
+
+    text-align: center;
+}

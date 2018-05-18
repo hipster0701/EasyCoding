@@ -32,7 +32,7 @@ h1 {
 
 ::-webkit-input-placeholder {
     /* WebKit browsers Safari,Google Chrome, Opera15+*/
-    color: #aaa;
+    color: white;
 }
 
 input[type="text"],
