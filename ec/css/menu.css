@@ -1,0 +1,140 @@
+﻿@import url("global.css");
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar {
+    background-color: var(--theme) !important;
+    padding: 1% 0;
+    font-size: 1.2em;
+}
+
+.navbar-brand {
+    min-height: 55px;
+    padding: 0 15px 5px;
+    color: var(--hightfont);
+}
+
+.nav-link {
+    color: var(--lowfont) !important;
+}
+
+.nav a:hover,
+a:active {
+    color: var(--hightfont) !important;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: var(--hightfont) !important;
+}
+
+.navbar-toggler-icon {
+    color: var(--hightfont);
+}
+
+#home {
+    background: url(img/mountains.jpg) no-repeat center center fixed;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+.landing-text {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.landing-text h1 {
+    font-size: 500%;
+    font-weight: 700;
+}
+
+.padding {
+    padding: 80px 0;
+}
+
+.padding img {
+    width: 100%;
+}
+
+.menu-toggle {
+    position: relative;
+    cursor: pointer;
+    float: right;
+    font-size: 0.875rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    height: 35px;
+    width: 35px;
+}
+
+.menu-toggle-grippy {
+    top: 15px;
+}
+
+.menu-toggle-grippy,
+.menu-toggle-grippy:before,
+.menu-toggle-grippy:after {
+    position: absolute;
+    left: 0px;
+
+    background-color: white;
+    content: "";
+
+    height: 5px;
+    width: 35px;
+
+    -webkit-transition: all 0.2s ease-in-out;
+
+    transition: all 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+.menu-toggle-grippy:before {
+    top: -10px;
+}
+
+.menu-toggle-grippy:after {
+    bottom: -10px;
+}
+
+.xtype > .menu-toggle-grippy {
+    background-color: var(--theme);
+}
+
+.xtype > .menu-toggle-grippy:before {
+    -webkit-transform: translateY(10px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
+}
+
+.xtype > .menu-toggle-grippy:after {
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
+
+}
+
+#fixed {
+    background: url(img/background.jpg) no-repeat center center fixed;
+    display: table;
+    height: 60%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--theme);
+    padding: 5% 5% 5% 5%;
+    color: var(--hightfont);
+}
+
+.icon {
+    max-width: 200px;
+}

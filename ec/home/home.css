@@ -1,0 +1,45 @@
+#main {
+    padding: 3em 1em;
+}
+
+header {
+    text-align: center;
+    font-family: monospace;
+}
+
+header h1 {
+    font-size: 55px;
+    font-family: Comic Sans MS;
+}
+
+header p {
+    font-size: 20px;
+}
+
+header p:link {
+    color: rgba(35, 36, 38);
+    text-decoration: none;
+}
+
+.content {
+    border-style: none;
+    border-radius: 20px;
+    text-align: center;
+    color: #7b7b7b;
+    font-size: 10px;
+    padding: 20px 5px 10px 5px;
+    background-color: #ecf5ff;
+}
+
+.content a:link {
+    color: rgba(35, 36, 38);
+    text-decoration: none;
+}
+
+.content a:hover {
+    color: #0000c6;
+}
+
+.tool {
+    height: 600px;
+}

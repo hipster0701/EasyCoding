@@ -1,0 +1,17 @@
+#main {
+    padding: 1em 1.5em;
+}
+
+.change {
+    margin-top: 3%;
+}
+
+header h2 {
+    text-align: left;
+    font-family: 標楷體;
+}
+
+header p {
+    text-align: left;
+    font-size: 15px;
+}

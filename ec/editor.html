@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Easy Coding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--.css-->
+    <link rel="stylesheet" href="boot/bootstrap-4.0.0.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/global/menu.css" rel="stylesheet">
+    <link href="css/ed.css" rel="stylesheet">
+
+
+    <!--.js-->
+    <script src="boot/jquery-3.2.1.min.js"></script>
+    <script src="boot/bootstrap-4.0.0.js"></script>
+    <script src="src-noconflict/ext-language_tools.js" type="text/javascript"></script>
+    <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+
+    <!--menu-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" herf="#"><img src="img/w3newbie2.png" width="150px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" style="margin-right: 15px">
+                <div class="menu-toggle">
+                    <span class="menu-toggle-grippy"></span>
+                </div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">個人檔案</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vote.html">投票</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">登入</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">聯繫</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--contain start-->
+    <div class="container-fluid" style="margin: 15px 0">
+        <div id="tab1" class="row">
+            <div class="col-4">
+                <span id="topic">1</span>
+                <span id="output">2</span>
+                <div id="tab">
+                    <!-- 頁籤按鈕 -->
+                    <ul>
+                        <li>
+                            <a href="#topic">
+                                <h6>題目</h6>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#output">
+                                <h6>輸出</h6>
+                            </a>
+                        </li>
+                        <button type="button" id="btn-vote" class="btn btn-link">投票</button>
+                    </ul>
+
+                    <!-- 頁籤的內容區塊 -->
+                    <div class="topic-content">
+                        <div class="inner-container">
+                            <div class="content">
+                                <p>內容1</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="output-content">
+                        <div class="inner-container">
+                            <div class="content">
+                                <pre>
+<red>錯誤</red>
+輸入:1
+輸出:2
+正確輸出:3
+
+<green>正確</green>
+輸入:2
+輸出:6
+
+<red>錯誤</red>
+輸入:1
+輸出:2
+正確輸出:3
+
+<green>正確</green>
+輸入:2
+輸出:6
+
+<red>錯誤</red>
+輸入:1
+輸出:2
+正確輸出:3
+
+<green>正確</green>
+輸入:2
+輸出:6
+
+<red>錯誤</red>
+輸入:1
+輸出:2
+正確輸出:3
+
+<green>正確</green>
+輸入:2
+輸出:6
+
+<red>錯誤</red>
+輸入:1
+輸出:2
+正確輸出:3
+
+<green>正確</green>
+輸入:2
+輸出:6
+
+<red>錯誤</red>
+輸入:1
+輸出:2
+正確輸出:3
+
+<green>正確</green>
+輸入:2
+輸出:6
+</pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" id="btn-run" class="btn btn-outline-dark">執行</button>
+                    <button type="button" id="btn-sendout" class="btn btn-outline-dark">送出</button>
+
+                </div>
+            </div>
+
+
+            <div class="col-8">
+                <div id="editor">
+                    <div id="editorDiv">
+                        <script>
+                            ace.require("ace/ext/language_tools");
+                            //建立輸入框
+                            var editor = ace.edit("editor");
+                            //輸入代碼提示
+                            editor.setOptions({
+                                enableBasicAutocompletion: true,
+                                enableSnippets: true,
+                                enableLiveAutocompletion: true
+                            });
+                            editor.setFontSize(20);
+                            //選擇語言
+                            editor.getSession().setMode("ace/mode/python");
+                            //设置初始内容
+                            x = "444564564"
+                            editor.setValue(x);
+
+                            editor.setTheme("ace/theme/ihatewhite")
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--contain end-->
+
+    <!--footer-->
+    <footer class="container-fluid text-cener">
+        <div class="row">
+            <div class="col-lg-3 col-sm-2 col-1"></div>
+
+            <div class="col-lg-4 col-sm-4 col-5">
+                <h3>關於我們</h3><br>
+                <h4>國立台中科技大學 資訊管理科</h4>
+            </div>
+
+            <div class="col-lg-2 col-sm-4 col-5">
+                <img src="img/p.png" class="icon" width=100>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $("#btn-sendout").click(function() {
+            $("#btn-vote").show();
+        });
+
+        $("#btn-run").click(function() {
+
+            if (true) {
+
+                $("#btn-sendout").show();
+
+            }
+        });
+    </script>
+
+
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

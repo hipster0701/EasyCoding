@@ -1,0 +1,75 @@
+#log-in {
+    position: fixed;
+
+    top: 20%;
+
+    height: 60%;
+    width: 100%;
+
+    z-index: 1;
+
+    color: white;
+
+    text-align: center;
+
+    transition: all 2s;
+
+}
+
+#log-in > .row {
+    z-index: -1;
+}
+
+.wrapper {
+    height: 100%;
+
+    background-color: #23415C;
+
+    padding-bottom: 20px;
+
+    overflow-y: auto;
+
+    z-index: 10;
+
+    display: none;
+
+}
+
+input {
+    height: 3em;
+    width: 100%;
+}
+
+form > .row {
+    margin: 20px 0;
+}
+
+.line {
+    position: absolute;
+    height: 100%;
+
+    left: 50%;
+
+    z-index: 2;
+
+    border-right: 1px solid #D4D4D2;
+    vertical-align: baseline;
+}
+
+.btn-fblogin {
+    margin: 20px 0;
+    /*    padding: 15px 30px;*/
+    color: white;
+    font-size: 15px;
+    border: none;
+    background-color: #3b5998;
+    /*    height: 48px;*/
+    width: 100%;
+}
+
+@media only screen and (max-width: 576px) {
+    input {
+        height: 2em;
+        width: 100%;
+    }
+}

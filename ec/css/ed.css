@@ -1,0 +1,241 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: #eef5f9;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+header {
+    width: 100%;
+    background-color: #23415C;
+    color: #FFFFFF;
+    -webkit-box-shadow: 0px 0px 10px #23415C;
+    box-shadow: 0px 0px 10px #23415C;
+}
+
+footer {
+    width: 100%;
+    background-color: #23415C;
+    color: #FFF;
+}
+
+.navbar {
+    background-color: #23415C !important;
+    padding: 1% 0;
+    font-size: 1.2em;
+}
+
+.navbar-brand {
+    min-height: 55px;
+    padding: 0 15px 5px;
+    color: #FFF;
+}
+
+.nav-link {
+    color: #D5D5D5 !important;
+}
+
+a:hover,
+a:active {
+    color: #FFF !important;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #fff !important;
+}
+
+.navbar-toggler-icon {
+    color: #fff;
+}
+
+#ace_gutter {
+    height: 59px;
+    width: 40px;
+    border-style: solid;
+    float: left;
+}
+
+#editor {
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 4px;
+    -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+#tab1 > div {
+    padding: 0 0 0 15px;
+}
+
+#tab {
+    background: #23415C;
+    width: 100%;
+    border-radius: 4px;
+    -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 頁籤ul */
+
+#tab > ul {
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#tab > ul > li {
+    list-style-type: none;
+}
+
+#tab > ul > li > a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #333;
+    float: left;
+    padding: 10px;
+    margin-right: 1%;
+}
+
+/*頁籤div內容*/
+
+#tab > div {
+    clear: both;
+    height: 0;
+    overflow: auto;
+    visibility: hidden;
+}
+
+/*第一筆的底色*/
+
+span:target ~ #tab > ul li:first-child a {
+    background: #23415C;
+}
+
+span:target ~ #tab > div:first-of-type {
+    visibility: hidden;
+    height: 0;
+}
+
+/*頁籤變換&第一筆*/
+
+span ~ #tab > ul li:first-child a,
+#topic:target ~ #tab > ul li a[href$="#topic"],
+#output:target ~ #tab > ul li a[href$="#output"] {
+    background: #7e9ab2;
+}
+
+/*頁籤內容顯示&第一筆*/
+
+span ~ #tab > div:first-of-type,
+#topic:target ~ #tab > div.topic-content,
+#output:target ~ #tab > div.output-content {
+    visibility: visible;
+    height: 70vh;
+    background: #fff;
+}
+
+#topic {
+    display: none;
+}
+
+#output {
+    display: none;
+}
+
+pre,
+p {
+    padding: 0em 1em 0em 1em;
+}
+
+h2 {
+    color: #0f2350;
+    /*text-align: center;*/
+}
+
+h6 {
+    color: #fff;
+    margin-bottom: 2%;
+}
+
+#btn-vote {
+    float: right;
+    color: #fff;
+    display: none;
+}
+
+#btn-sendout {
+    margin: 10px 0 0 0;
+    float: right;
+    background-color: #fff;
+    border: none;
+    -webkit-box-shadow: 0 0 0 2px rgba(35, 65, 92, 0.5);
+    box-shadow: 0 0 0 2px rgba(35, 65, 92, 0.5);
+    display: none;
+
+}
+
+#btn-sendout:hover {
+    background-color: #23415C;
+}
+
+#btn-sendout:focus {
+    -webkit-box-shadow: 0 0 0 2px rgba(35, 65, 92, 0.5);
+    box-shadow: 0 0 0 2px rgba(35, 65, 92, 0.5);
+}
+
+#btn-run {
+    margin: 10px 0 0 10px;
+    float: right;
+    background-color: #fff;
+    border: none;
+    -webkit-box-shadow: 0 0 0 2px rgba(35, 65, 92, 0.5);
+    box-shadow: 0 0 0 2px rgba(35, 65, 92, 0.5);
+}
+
+#btn-run:hover {
+    background-color: #23415C;
+}
+
+#btn-run:focus {
+    -webkit-box-shadow: 0 0 0 2px rgba(35, 65, 92, 0.5);
+    box-shadow: 0 0 0 2px rgba(35, 65, 92, 0.5);
+}
+
+
+red {
+    color: red;
+}
+
+green {
+    color: green;
+}
+
+.output-content,
+.topic-content {
+    overflow: hidden;
+}
+
+.inner-container {
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.output-content,
+.topic-content,
+.content {
+    height: 70vh;
+}
+
+/* for Chrome */
+
+.inner-container::-webkit-scrollbar {
+    display: none;
+}
+
+.output-content pre {
+    font-size: 18px;
+}

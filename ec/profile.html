@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width;initial scale=1.0">
+
+    <title>OO的個人頁面</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/pstyle.css">
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="MDB-4.5.9/js/mdb.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" herf="#"><img src="img/w3newbie2.png" width="150px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">關於</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">註冊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">登出</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">聯繫</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row content">
+
+            <div id="user" class="col-md-12 col-lg-4 text-center">
+                <div class="float">
+                    <img src="img/user.png" width="100" style="padding-top: 15px">
+                    <h2>Lububu</h2>
+                    <p>註冊自:2018/02/08</p>
+                    <p>上次登入時間:2018/08/20</p>
+                </div>
+            </div>
+
+            <div id="lesson" class="col-md-12 col-lg-4">
+                <div class="row ">
+                    <div class="col-sm-12 col-md-6 col-lg-12">
+                        <div class="float">
+                            <h2>課程進度:</h2>
+                            <h4>U4-1 串列</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-12">
+                        <div class="float">
+                            <h2>作業進度:</h2>
+                            <h4>U4-1 串列的小作業</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="total" class="col-lg-4 text-center">
+                <div class="float">
+                    <h2>總進度</h2>
+                    <canvas id="doughnutChart"></canvas>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="float">
+                    <h2>投票統計</h2>
+                    <p>各單元投票數總平均</p>
+
+
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="float">
+                    <h2>成就</h2>
+                    <div class="text-center">
+                        <p>最近獲得的成就1</p>
+                        <p>最近獲得的成就2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="container-fluid text-cener">
+        <div class="row">
+            <div class="col-lg-3 col-sm-2 col-1"></div>
+            <div class="col-lg-4 col-sm-4 col-5">
+                <h3>關於我們</h3><br>
+                <h4>國立台中科技大學 資訊管理科</h4>
+            </div>
+            <div class="col-lg-2 col-sm-4 col-5">
+                <img src="img/p.png" class="icon">
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="js/profile%20chart.js"></script>
+</body>
+
+</html>

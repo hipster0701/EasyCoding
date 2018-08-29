@@ -1,0 +1,36 @@
+#sign-up {
+
+    position: fixed;
+
+    top: 15%;
+
+    height: 70%;
+    width: 100%;
+
+    z-index: 1;
+
+    color: white;
+
+    text-align: center;
+
+    transition: all 0.2s;
+
+}
+
+.btn-signup {
+    padding: 15px 30px;
+    color: black;
+    font-size: 15px;
+    border: none;
+    background-color: #fff;
+    height: 48px;
+}
+
+.btn-fblogin {
+    padding: 15px 30px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    background-color: #3b5998;
+    height: 48px;
+}

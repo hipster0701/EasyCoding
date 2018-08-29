@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lesson</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
+</head>
+
+<body style="background-color: #eef5f9;">
+    <!-- body code goes here -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" herf="#"><img src="img/w3newbie2.png" width="150px"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">關於</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="signup-btn" class="nav-link" href="#">註冊</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="login-btn" class="nav-link" href="#">登入</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">聯繫</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container" style="background-color: white;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 4px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    padding: 10px 20px;
+">
+        <h2>U0介紹</h2>
+        <hr>
+        <h5>U0-1關於Python</h5>
+        <h6>起源</h6>
+        <p class="word">Python的最初設計者吉多·范羅蘇姆，在1994年正式釋出1.0版，吉多·范羅蘇姆是一位蒙提·派森飛行馬戲團的狂熱愛好者，因此他使用Python作為此程式語言之名，此外Python的中文為蟒蛇，所以Python的圖示是蛇。</p>
+        <h6>特性</h6>
+        <p class="word">物件導向程式設計: 它將物件視為程式中的基本單元，模組、函式、變數等都是物件，並支援繼承、多重繼承、覆寫等功能，使得軟體較容易維護。 簡單性:語句簡潔明確，靠縮排來表示判斷式(if)或迴圈(for、while)等的程式碼區塊。 動態性:指在撰寫程式時可以隨時改變物件的結構與內容，隨時可新增新的物件或刪除已有的物件或是其他變化，動態語言具有很高的靈活性。 函式庫:像print()輸出函式就是函式庫中的函式，我們在寫程式時都在使用函式庫，當我們要寫一些特別的功能時，如數學運算，我們就能引入(import)關於math函示庫來使用它具有的函式，如絕對值、次方等，而Python可用的函式庫類型非常的多，讓我們不需自己寫可直接使用。 可移植性:Python可在許多平台上執行，如Windows、Linux、Mas OS X、IOS、Android、DOS、OS等。 Python的應用非常廣泛，機器人、人工智慧、數學運算、系統軟體、網站設計、遊戲及多媒體、影像等。
+
+        </p>
+        <h6>版本</h6>
+        <p class="word">目前Python的版本有2.x與3.x，兩個版本不完全相容，有許多差異，開發者已聲明Python 2到2.7就不會再更新了，之後都以Python 3為主，本網站內容只介紹Python 3</p>
+        <h5>U0-3開始使用Python</h5>
+        <h6>互動交談模式Python Shell與存儲程式碼檔案</h6>
+        <p class="word">進入互動交談模式: 開啟Python資料夾內的IDLE↓
+        </p>
+        <p class="img"><img src="https://i.imgur.com/ZUld1mK.jpg" class="img-fluid" alt="Responsive image"></p>
+        <p class="word">互動交談模式顧名思義就是跟Python互動與交談，你跟Python說一句話，Python就會回覆你，可以執行單行的程式碼，>>>為等待輸入指令的提示符號。</p>
+        <pre class="part" data-startline="93" data-endline="98"><code class="python hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+        <span data-linenumber="2"></span>
+        <span data-linenumber="3"></span>
+        <span data-linenumber="4"></span></div><div class="code"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">1</span>+<span class="hljs-number">2</span> <span class="hljs-comment">#計算1+2</span>
+        <span class="hljs-number">3</span>
+        <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span>+<span class="hljs-number">20</span> <span class="hljs-comment">#計算5+20</span>
+        <span class="hljs-number">25</span>
+        </div></div></code></pre>
+    </div>
+
+    <footer></footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.0.0.js"></script>
+</body>
+
+</html>
